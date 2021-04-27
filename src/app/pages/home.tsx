@@ -1,13 +1,12 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
-
 import PrimaryButton from "@/app/components/button/primary";
 import Title from "@/app/components/typography/title/title";
-import Subtitle from "../components/typography/subtitle/subtitle";
+import Subtitle from "@/app/components/typography/subtitle/subtitle";
+import classes from './home.scss';
 
 const App: React.FC = () => {
   return (
-    <div>
+    <div className={classes.container}>
       <Title />
       <Subtitle />
       <PrimaryButton value="START" />
