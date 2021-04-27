@@ -2,6 +2,7 @@
 
 .backgroundColor{
   background-color: $primaryBlack;
+  height: 100vh;
 }
 
 .buttonBack {
@@ -16,4 +17,9 @@
   width: 347px;
   height: 56px;
   font-weight: bold;
+}
+
+.title{
+  color: $primaryWhite;
+  font-size: 36px;
 }

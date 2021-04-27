@@ -14,7 +14,7 @@ const Person: React.FC = () => {
         choose your path again, Padawan
       </button>
       <Thumbnail />
-      <h1>Your master is Darth Vader</h1>
+      <h1 className={classes.title}>Your master is Darth Vader</h1>
     </div>
   )
 }
