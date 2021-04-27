@@ -1,10 +1,12 @@
 import React from "react";
+import PrimaryButton from '@/app/components/button/primary';
+// import { PrimaryButton } from '@/app/components/button';
 
 const App: React.FC = () => {
   return (
     <div>
-      <h1>Iclinic</h1>
-      
+      <h1>Welcome to IClinic</h1>
+      <PrimaryButton value="START"/>
     </div>
   )
 }
