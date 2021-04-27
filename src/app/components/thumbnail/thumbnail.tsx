@@ -4,7 +4,7 @@ import React from 'react'
 const darthVader = 'https://raw.githubusercontent.com/iclinic/challenge-front/master/images-masters/darth-vader.png';
 const lukeSkywalker = 'https://github.com/iclinic/challenge-front/blob/master/images-masters/luke-skywalker.png';
 
-type Image= {
+type Props= {
   src: string,
   size?: number,
   alt?: string
@@ -13,7 +13,7 @@ type Image= {
 const Thumbnail: React.FC = () => {
   return (
     <div>
-      <img src="" alt="Image Name" />
+      <img src={darthVader} alt="Image Name" />
     </div>
   )
 }
