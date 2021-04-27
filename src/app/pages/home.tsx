@@ -1,5 +1,5 @@
 import React from "react";
-import PrimaryButton from "@/app/components/button/primary";
+import PrimaryButton from "@/app/components/button/primary/primary";
 import Title from "@/app/components/typography/title/title";
 import Subtitle from "@/app/components/typography/subtitle/subtitle";
 import classes from './home.scss';

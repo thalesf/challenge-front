@@ -3,3 +3,17 @@
 .backgroundColor{
   background-color: $primaryBlack;
 }
+
+.buttonBack {
+  color: $primaryWhite;
+  padding: 25px;
+  margin-bottom: 74px;
+}
+
+.button{
+  border-radius: 10px;
+  margin-bottom: 24px;
+  width: 347px;
+  height: 56px;
+  font-weight: bold;
+}
