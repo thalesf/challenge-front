@@ -10,6 +10,7 @@ ReactDom.render(
     <Switch>
       <Route path="/" component={Home} exact />
       <Route path="/person" component={Person} exact />
+      <Route component={() => <div> 404</div>} />
     </Switch>
   </BrowserRouter>,
   document.getElementById("main"))
