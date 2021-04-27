@@ -1,3 +1,3 @@
 export interface loadUser {
-  loadUser: () => Promise<any>
+  loadUserData: () => Promise<any>
 }
