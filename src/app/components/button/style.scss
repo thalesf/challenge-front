@@ -1,14 +1,5 @@
 @import "../../styles/colors.scss";
 
-.title {
-  background-color: $primaryBlue;
-  font-weight: 700;
-  font-size: 72px;
-
-  & .subtitle {
-    font-weight: 400;
-  }
-}
 .button{
   border: none;
   background-color: $primaryBlue;

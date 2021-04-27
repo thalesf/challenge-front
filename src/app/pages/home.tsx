@@ -2,12 +2,13 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 
 import PrimaryButton from "@/app/components/button/primary";
-import Person from "./person";
+import Title from "@/app/components/typography/title/title";
 
 const App: React.FC = () => {
   return (
     <div>
-      <h1>Welcome to IClinic</h1>
+      <Title />
+      <p>FRONTEND CHALLENGE</p>
       <PrimaryButton value="START" />
     </div>
   )
