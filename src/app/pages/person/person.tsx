@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Thumbnail from "@/app/components/thumbnail/thumbnail";
 import { useHistory } from "react-router-dom";
 import clsx from "clsx";
 
-import classes from "./person.scss";
+import Thumbnail from "@/app/components/thumbnail/thumbnail";
 import { loadUsers } from "@/app/redux/ducks/users";
 import { RootStore } from "@/app/redux/store";
+import classes from "./person.scss";
 
 
 const darthVader = 'https://raw.githubusercontent.com/iclinic/challenge-front/master/images-masters/darth-vader.png';
@@ -19,8 +19,15 @@ const Person: React.FC = () => {
   const user = useSelector((state: RootStore) => state.user);
   const loading = useSelector((state: RootStore) => state.user.loading);
 
+  useEffect(() => {
+    dispatch(loadUsers())
+  }, []);
+
   const validateUser = () => !loading && user.user.url.includes("4")
 
+  if(loading){
+    return <div>Loading...</div>
+  }
   return (
     <div className={clsx(validateUser() ? classes.backgroundPrimary : classes.backgroundSecondary)}>
       <div className={classes.buttonBack} onClick={() => history.goBack()}>

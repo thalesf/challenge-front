@@ -1,6 +1,6 @@
 import { User } from "@/core/entities/user";
 import { Dispatch } from "redux";
-import AxiosHttpClient from '../../../core/infra/http/axios/http-get';
+import AxiosHttpClient from '@/core/infra/http/axios/http-get';
 
 export const Types = {
   LOAD_USERS_REQUEST: 'users/LOAD_USERS_REQUEST',
