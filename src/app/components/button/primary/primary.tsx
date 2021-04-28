@@ -8,11 +8,9 @@ type Props = {
 
 const PrimaryButton: React.FC<Props> = ({ value }: Props) => {
   return (
-    <div>
-      <Link to="/person" >
-        <button type="button" className={classes.button}>{value}</button>
-      </Link>
-    </div >
+    <Link to="/person" >
+      <button type="button" className={classes.button}>{value}</button>
+    </Link>
   )
 }
 export default PrimaryButton;

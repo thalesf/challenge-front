@@ -1,20 +1,18 @@
 import React from 'react';
-import { render, screen, cleanup } from '@testing-library/react';
-import Title from "@/app/components/typography/title/title";
-import Subtitle from "@/app/components/typography/subtitle/subtitle";
+import { BrowserRouter, Link } from 'react-router-dom';
+import { render, screen, fireEvent, cleanup } from '@testing-library/react';
+import Home from './home'
 import '@testing-library/jest-dom/extend-expect'
 
-afterEach(cleanup);
+const renderWithRouter = (ui, { route = '/' } = {}) => {
+  window.history.pushState({}, 'Test page', route)
+  return render(ui, { wrapper: BrowserRouter })
+}
 
 describe('<Home />', () => {
-  test('Should render with correct Title', () => {
-    render(<Title />);
+  test('Should render  with correct Title and subtitle', () => {
+    renderWithRouter(<Home />);
     expect(screen.getByRole('heading')).toHaveTextContent('Welcome to iClinic')
-  })
-
-  test('Should render with correct Subtitle', () => {
-    render(<Subtitle />);
     expect(screen.getByText('FRONTEND CHALLENGE')).toBeInTheDocument()
   })
-
 })
