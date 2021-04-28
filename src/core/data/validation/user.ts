@@ -2,12 +2,12 @@
 //   loading: boolean,
 //   url: string
 // }
-export class ValidateUser {
+// export class ValidateUser {
 
-  constructor(private readonly loading: boolean, private readonly url: string) { }
+//   constructor(private readonly loading: boolean, private readonly url: string) { }
 
-  validate() {
-    return true;
-  }
+//   validate() {
+//     return true;
+//   }
 
-}
+// }

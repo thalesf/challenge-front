@@ -2,8 +2,8 @@ import React from "react";
 import ReactDom from "react-dom";
 import { Provider } from 'react-redux';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Home from "@/app/pages/home";
-import Person from "@/app/pages/person";
+import Home from "@/app/pages/home/home";
+import Person from "@/app/pages/person/person";
 import "@/app/styles/global.scss";
 import store from '@/app/redux/store';
 

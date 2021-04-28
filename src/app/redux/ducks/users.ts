@@ -71,6 +71,7 @@ const usersReducer = (state: Users = initialState, action: any): Users => {
     case Types.LOAD_USERS_FAILURE:
       return {
         ...state,
+        loading: false,
         user: {}
       }
     default:

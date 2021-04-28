@@ -4,9 +4,9 @@ import PrimaryButton from "@/app/components/button/primary/primary";
 import Title from "@/app/components/typography/title/title";
 import Subtitle from "@/app/components/typography/subtitle/subtitle";
 import { loadUser } from "@/core/usecases/load-user";
+import { loadUsers } from "@/app/redux/ducks/users";
 
 import classes from './home.scss';
-import { loadUsers } from "../redux/ducks/users";
 
 type Props = {
   loadUser: loadUser

@@ -1,12 +1,12 @@
 import React, { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Thumbnail from "../components/thumbnail/thumbnail";
+import Thumbnail from "@/app/components/thumbnail/thumbnail";
 import { useHistory } from "react-router-dom";
 import clsx from "clsx";
 
 import classes from "./person.scss";
-import { loadUsers } from "../redux/ducks/users";
-import { RootStore } from "../redux/store";
+import { loadUsers } from "@/app/redux/ducks/users";
+import { RootStore } from "@/app/redux/store";
 
 
 const darthVader = 'https://raw.githubusercontent.com/iclinic/challenge-front/master/images-masters/darth-vader.png';
