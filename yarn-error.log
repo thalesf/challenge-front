@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\thale\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add faker -D
+  C:\Program Files\nodejs\node.exe C:\Users\thale\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add -D fetch-mock
 
 PATH: 
-  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\thale\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\thale\bin;C:\Python39\Scripts;C:\Python39;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\Users\thale\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\thale\.cargo\bin;C:\Users\thale\AppData\Local\Microsoft\WindowsApps;C:\Users\thale\AppData\Local\hyper\app-3.0.2\resources\bin;C:\Users\thale\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Docker Toolbox;C:\Users\thale\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin;C:\Users\thale\AppData\Roaming\npm;C:\Program Files\JetBrains\IntelliJ IDEA 2020.3.3\bin
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\thale\bin;C:\Python39\Scripts;C:\Python39;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\Users\thale\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\thale\.cargo\bin;C:\Users\thale\AppData\Local\Microsoft\WindowsApps;C:\Users\thale\AppData\Local\hyper\app-3.0.2\resources\bin;C:\Users\thale\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Docker Toolbox;C:\Users\thale\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\thale\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin;C:\Users\thale\AppData\Roaming\npm;C:\Program Files\JetBrains\IntelliJ IDEA 2020.3.3\bin
 
 Yarn version: 
   1.22.4
@@ -69,6 +69,7 @@ npm manifest:
       "eslint-plugin-react": "^7.23.2",
       "eslint-plugin-react-hooks": "^4.0.8",
       "eslint-plugin-standard": "^4.0.1",
+      "faker": "^5.5.3",
       "file-loader": "^6.2.0",
       "html-webpack-plugin": "^5.3.1",
       "identity-obj-proxy": "^3.0.0",
@@ -3862,6 +3863,11 @@ Lockfile:
     version "1.4.0"
     resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
     integrity sha1-4mifjzVvrWLMplo6kcXfX5VRaS8=
+  
+  faker@^5.5.3:
+    version "5.5.3"
+    resolved "https://registry.yarnpkg.com/faker/-/faker-5.5.3.tgz#c57974ee484431b25205c2c8dc09fda861e51e0e"
+    integrity sha512-wLTv2a28wjUyWkbnX7u/ABZBkUkIF2fCd73V6P2oFqEGEktDfzWx4UxrSqtPRw0xPRAcjeAOIiJWqZm3pP4u3g==
   
   fast-deep-equal@^3.1.1:
     version "3.1.3"

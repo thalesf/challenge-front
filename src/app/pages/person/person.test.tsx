@@ -7,7 +7,7 @@ import Person from '@/app/pages/person/person';
 import reducer from "@/app/redux/root";
 
 function renderWithRedux(
-  ui,
+  ui: any,
   {
     initialState = {},
     store = createStore(reducer, initialState),
@@ -21,9 +21,18 @@ function renderWithRedux(
 }
 
 describe('<Home />', () => {
-  test('Should request data and from  ', () => {
-    const { getByText } = renderWithRedux(<Person />);
-    // expect(screen.getByRole('heading')).toHaveTextContent('Welcome to iClinic')
-    // expect(screen.getByText('FRONTEND CHALLENGE')).toBeInTheDocument()
+  test('Should request user data and render on screen', () => {
+    const user = {
+      name: 'Luck Skywalker',
+      url: '/api/people/1'
+    }
+    const { getByText } = renderWithRedux(<Person />, {
+      initialState: {
+       user: {
+         user
+       }
+      }
+    });
+    expect(getByText(/Your master is Luck Skywalker/i)).toBeInTheDocument
   })
 })
