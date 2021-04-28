@@ -20,7 +20,7 @@ function renderWithRedux(
   return rtlRender(ui, { wrapper: Wrapper, ...renderOptions })
 }
 
-describe('<Home />', () => {
+describe('<Person />', () => {
   test('Should request user data and render on screen', () => {
     const user = {
       name: 'Luck Skywalker',
