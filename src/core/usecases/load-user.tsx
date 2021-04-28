@@ -1,5 +1,5 @@
-export interface loadUser {
-  loadUser: () => Promise<LoadUserModel>
+export interface loadUsers {
+  loadUsers: () => Promise<LoadUserModel>
 }
 
 export type LoadUserModel = {

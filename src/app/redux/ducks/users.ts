@@ -1,3 +1,4 @@
+import { User } from "@/core/entities/user";
 import { Dispatch } from "redux";
 import AxiosHttpClient from '../../../core/infra/http/axios/http-get';
 
@@ -9,7 +10,7 @@ export const Types = {
 
 interface Users {
   loading: boolean,
-  user: object
+  user: User
 }
 
 const initialState: Users = {
@@ -60,7 +61,10 @@ const usersReducer = (state: Users = initialState, action: any): Users => {
       return {
         ...state,
         loading: true,
-        user: {}
+        user: {
+          name: "",
+          url: ""
+        }
       }
     case Types.LOAD_USERS_SUCCESS:
       return {
@@ -72,7 +76,10 @@ const usersReducer = (state: Users = initialState, action: any): Users => {
       return {
         ...state,
         loading: false,
-        user: {}
+        user: {
+          name: "",
+          url: ""
+        }
       }
     default:
       return state;
