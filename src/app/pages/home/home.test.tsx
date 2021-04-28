@@ -10,7 +10,7 @@ const renderWithRouter = (ui, { route = '/' } = {}) => {
 }
 
 describe('<Home />', () => {
-  test('Should render  with correct Title and subtitle', () => {
+  test('Should render Texts with correct Title and subtitle', () => {
     renderWithRouter(<Home />);
     expect(screen.getByRole('heading')).toHaveTextContent('Welcome to iClinic')
     expect(screen.getByText('FRONTEND CHALLENGE')).toBeInTheDocument()

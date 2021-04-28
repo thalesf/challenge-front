@@ -20,7 +20,7 @@ const Person: React.FC = () => {
   const loading = useSelector((state: RootStore) => state.user.loading);
 
   useEffect(() => {
-    dispatch(loadUsers())
+    loadUsers()
   }, []);
 
   const validateUser = () => !loading && user.user.url.includes("4")
@@ -33,7 +33,7 @@ const Person: React.FC = () => {
       <div className={classes.buttonBack} onClick={() => history.goBack()}>
         Back
       </div>
-      <button className={classes.button} onClick={() => dispatch(loadUsers())}>
+      <button className={clsx([classes.button])} onClick={() => dispatch(loadUsers())}>
         choose your path again, Padawan
       </button>
       {validateUser() ? <Thumbnail src={darthVader} alt="Darth Vader" /> : <Thumbnail src={lukeSkywalker} alt="Luke Skywalker" />}
