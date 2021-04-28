@@ -1,6 +1,6 @@
 import HttpClient, { HttpRequest } from "@/core/data/axios-http-client";
 import axios from "axios";
-export class AxiosHttpClient implements HttpClient {
+export default class AxiosHttpClient implements HttpClient {
   async request<Response>(option: HttpRequest): Promise<Response> {
     return axios({
       method: option.method,

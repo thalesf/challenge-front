@@ -1,3 +1,6 @@
+import { loadUser } from "@/core/usecases/load-user";
+import AxiosHttpClient from '../../../core/infra/http/axios/http-get';
+
 export const Types = {
   LOAD_USERS_REQUEST: 'users/LOAD_USERS_REQUEST',
   LOAD_USERS_SUCCESS: 'users/LOAD_USERS_SUCCESS',
@@ -12,6 +15,20 @@ interface Users {
 const initialState: Users = {
   loading: false,
   users: []
+}
+
+export const loadUsers = async() => {
+  try {
+    const axios = new AxiosHttpClient();
+    const data = await axios.request({
+      url: 'https://swapi.dev/api/people/1',
+      method: "get",
+    })
+    console.log("DATA", data);
+
+  } catch (error) {
+    
+  }
 }
 
 const usersReducer = (state: Users = initialState, action: any): Users => {
@@ -31,7 +48,7 @@ const usersReducer = (state: Users = initialState, action: any): Users => {
   }
 }
 
-export const getUsers = () => {
+export const getUsers = async () => {
   return {
     type: Types.LOAD_USERS_REQUEST,
   }

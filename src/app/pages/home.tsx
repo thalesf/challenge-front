@@ -6,7 +6,7 @@ import Subtitle from "@/app/components/typography/subtitle/subtitle";
 import { loadUser } from "@/core/usecases/load-user";
 
 import classes from './home.scss';
-import { getUsers } from "../redux/ducks/users";
+import { loadUsers } from "../redux/ducks/users";
 
 type Props = {
   loadUser: loadUser
@@ -16,8 +16,12 @@ const App: React.FC<Props> = ({ loadUser }: Props) => {
 
   const dispatch = useDispatch();
 
+  async function getUser(){
+    loadUsers();
+  }
+
   useEffect(() => {
-    dispatch(getUsers())
+    getUser();
   }, []);
 
   return (
