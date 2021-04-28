@@ -1,6 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Link } from 'react-router-dom';
-import { render, screen, fireEvent, cleanup } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
+import { render, screen } from '@testing-library/react';
 import Home from './home'
 import '@testing-library/jest-dom/extend-expect'
 
