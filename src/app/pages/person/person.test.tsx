@@ -1,16 +1,18 @@
 import React from 'react';
-import { createStore } from 'redux'
-import { Provider } from 'react-redux'
-import { render as rtlRender, screen } from '@testing-library/react';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+import { render as rtlRender } from '@testing-library/react';
+import configureStore from 'redux-mock-store';
+
 import '@testing-library/jest-dom/extend-expect'
 import Person from '@/app/pages/person/person';
-import reducer from "@/app/redux/root";
 
+const mockStore = configureStore([thunk])
 function renderWithRedux(
   ui: any,
   {
     initialState = {},
-    store = createStore(reducer, initialState),
+    store = mockStore(initialState),
     ...renderOptions
   } = {}
 ) {
@@ -33,6 +35,6 @@ describe('<Person />', () => {
        }
       }
     });
-    expect(getByText(/Your master is Luck Skywalker/i)).toBeInTheDocument
+    expect(getByText(/Your master is Luck Skywalker/i)).toBeInTheDocument()
   })
 })

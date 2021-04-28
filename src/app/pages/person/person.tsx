@@ -8,7 +8,6 @@ import { loadUsers } from "@/app/redux/ducks/users";
 import { RootStore } from "@/app/redux/store";
 import classes from "./person.scss";
 
-
 const darthVader = 'https://raw.githubusercontent.com/iclinic/challenge-front/master/images-masters/darth-vader.png';
 const lukeSkywalker = 'https://raw.githubusercontent.com/iclinic/challenge-front/master/images-masters/luke-skywalker.png';
 
@@ -20,12 +19,12 @@ const Person: React.FC = () => {
   const loading = useSelector((state: RootStore) => state.user.loading);
 
   useEffect(() => {
-    loadUsers()
+    dispatch(loadUsers())
   }, []);
 
   const validateUser = () => !loading && user.user.url.includes("4")
 
-  if(loading){
+  if (loading) {
     return <div>Loading...</div>
   }
   return (
