@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Thumbnail from "@/app/components/thumbnail/thumbnail";
 import { useHistory } from "react-router-dom";

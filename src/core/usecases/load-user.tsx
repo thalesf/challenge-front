@@ -1,3 +1,8 @@
 export interface loadUser {
-  loadUserData: () => Promise<any>
+  loadUser: () => Promise<LoadUserModel>
+}
+
+export type LoadUserModel = {
+  name: string,
+  url: string
 }
