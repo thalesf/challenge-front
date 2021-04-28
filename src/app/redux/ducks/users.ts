@@ -1,4 +1,4 @@
-import { loadUser } from "@/core/usecases/load-user";
+import { Dispatch } from "redux";
 import AxiosHttpClient from '../../../core/infra/http/axios/http-get';
 
 export const Types = {
@@ -17,17 +17,38 @@ const initialState: Users = {
   users: []
 }
 
-export const loadUsers = async() => {
+export const loadUsers = () => async (dispatch: Dispatch) => {
   try {
+    dispatch({
+      type: Types.LOAD_USERS_REQUEST,
+      loading: true
+    })
+
     const axios = new AxiosHttpClient();
-    const data = await axios.request({
+    const requestOne = axios.request({
       url: 'https://swapi.dev/api/people/1',
       method: "get",
     })
-    console.log("DATA", data);
+
+    const requestTwo = axios.request({
+      url: 'https://swapi.dev/api/people/4',
+      method: "get",
+    })
+
+
+    Promise.race([requestOne, requestTwo]).then((user: any) => {
+      dispatch({
+        type: Types.LOAD_USERS_SUCCESS,
+        loading: false,
+        users: user.data
+      })
+    })
 
   } catch (error) {
-    
+    dispatch({
+      type: Types.LOAD_USERS_FAILURE,
+      loading: false
+    })
   }
 }
 
@@ -48,10 +69,5 @@ const usersReducer = (state: Users = initialState, action: any): Users => {
   }
 }
 
-export const getUsers = async () => {
-  return {
-    type: Types.LOAD_USERS_REQUEST,
-  }
-}
 
 export default usersReducer;

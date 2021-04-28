@@ -17,7 +17,7 @@ const App: React.FC<Props> = ({ loadUser }: Props) => {
   const dispatch = useDispatch();
 
   async function getUser(){
-    loadUsers();
+    dispatch(loadUsers())
   }
 
   useEffect(() => {
