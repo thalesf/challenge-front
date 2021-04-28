@@ -1,19 +1,16 @@
 import React from 'react'
 import classes from "./style.scss";
 
-const darthVader = 'https://raw.githubusercontent.com/iclinic/challenge-front/master/images-masters/darth-vader.png';
-const lukeSkywalker = 'https://github.com/iclinic/challenge-front/blob/master/images-masters/luke-skywalker.png';
-
-type Props= {
+type Props = {
   src: string,
-  size?: number,
+  // size?: number,
   alt?: string
 };
 
-const Thumbnail: React.FC = () => {
+const Thumbnail: React.FC<Props> = ({ src, alt }: Props) => {
   return (
     <div>
-      <img src={darthVader} alt="Image Name" className={classes.thumbnail} />
+      <img src={src} alt={alt} className={classes.thumbnail} />
     </div>
   )
 }

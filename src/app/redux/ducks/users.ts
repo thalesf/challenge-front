@@ -9,19 +9,21 @@ export const Types = {
 
 interface Users {
   loading: boolean,
-  users: []
+  user: object
 }
 
 const initialState: Users = {
   loading: false,
-  users: []
+  user: {
+    name: "",
+    url: ""
+  }
 }
 
 export const loadUsers = () => async (dispatch: Dispatch) => {
   try {
     dispatch({
       type: Types.LOAD_USERS_REQUEST,
-      loading: true
     })
 
     const axios = new AxiosHttpClient();
@@ -39,15 +41,15 @@ export const loadUsers = () => async (dispatch: Dispatch) => {
     Promise.race([requestOne, requestTwo]).then((user: any) => {
       dispatch({
         type: Types.LOAD_USERS_SUCCESS,
-        loading: false,
-        users: user.data
+        payload: {
+          user: user.data
+        }
       })
     })
 
   } catch (error) {
     dispatch({
       type: Types.LOAD_USERS_FAILURE,
-      loading: false
     })
   }
 }
@@ -57,12 +59,19 @@ const usersReducer = (state: Users = initialState, action: any): Users => {
     case Types.LOAD_USERS_REQUEST:
       return {
         ...state,
-        users: []
+        loading: true,
+        user: {}
       }
     case Types.LOAD_USERS_SUCCESS:
       return {
         ...state,
-        users: []
+        loading: false,
+        user: action.payload.user
+      }
+    case Types.LOAD_USERS_FAILURE:
+      return {
+        ...state,
+        user: {}
       }
     default:
       return state;

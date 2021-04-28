@@ -1,7 +1,11 @@
 @import "@/app/styles/colors.scss";
 
-.backgroundColor{
+.backgroundPrimary{
   background-color: $primaryBlack;
+  height: 100vh;
+}
+.backgroundSecondary{
+  background-color: $primaryYellow;
   height: 100vh;
 }
 
