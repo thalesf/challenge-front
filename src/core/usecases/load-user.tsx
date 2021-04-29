@@ -1,7 +1,4 @@
-export type LoadUserModel = {
-  name: string,
-  url: string,
-}
+import { User } from '@/core/entities/user';
 export interface LoadUserItem {
-  getUser(): Promise<LoadUserModel>
+  getUser(): Promise<User>
 }

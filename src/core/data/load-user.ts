@@ -1,4 +1,5 @@
-import { LoadUserItem, LoadUserModel } from "@/core/usecases/load-user";
+import { LoadUserItem } from "@/core/usecases/load-user";
+import { User } from "@/core/entities/user";
 import { HttpClient } from '@/core/data/axios-http-client'
 
 export class LoadUser implements LoadUserItem {
@@ -6,7 +7,7 @@ export class LoadUser implements LoadUserItem {
     private readonly url: string,
     private readonly httpGet: HttpClient) {}
 
-  async getUser():Promise<LoadUserModel> {
+  async getUser():Promise<User> {
     const {data: httpResponse} = await this.httpGet.request({
       url: this.url,
       method: "get"
