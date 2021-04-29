@@ -11,10 +11,10 @@
 
 ## :speech_balloon:	: Stack
 
-React
-Typescript
-Sass
-Webpack
+React <br />
+Typescript <br />
+Sass <br />
+Webpack <br />
 
 
 ## :earth_americas: Link
