@@ -1,5 +1,9 @@
 # Front End Challenge Iclinic - Thales Ferreira
 
+<p align="center">
+  <img src="https://eretz.bio/wp-content/uploads/2020/09/logo-iclinic.png">
+</p>
+
 ## :zap: Usage
 
 ### Use bash
