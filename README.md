@@ -45,4 +45,5 @@ $ npm test:watch or yarn test:watch
 ### Run Build
 ```bash
 $ npm build or yarn build
+# ouput /dist folder
 ```
