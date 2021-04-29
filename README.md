@@ -14,7 +14,6 @@
 React <br />
 Typescript <br />
 Sass <br />
-Webpack <br />
 
 
 ## :earth_americas: Link
