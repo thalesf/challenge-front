@@ -1,9 +1,9 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { merge } = require('webpack-merge');
+const common = require('./webpack.common');
 
-
-module.exports = {
+module.exports = merge(common,{
+  mode: "development",
   output: {
     path: path.join(__dirname, "/public/js"),
     filename: "bundle.js",
@@ -45,8 +45,4 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({ template: "./public/index.html" })
-  ],
-};
+});
