@@ -11,7 +11,7 @@
     "build": "webpack --config webpack.prod.js",
     "deploy": "gh-pages -d build",
     "test": "jest",
-    "test:watch": "yarn test --watch --passWithNoTests --no-cache --runInBand"
+    "test:watch": "yarn test --watch --no-cache --colors"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -62,7 +62,6 @@
     "faker": "^5.5.3",
     "fetch-mock": "^9.11.0",
     "file-loader": "^6.2.0",
-    "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^5.3.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^25.5.4",
