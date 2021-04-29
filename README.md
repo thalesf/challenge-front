@@ -1,10 +1,15 @@
-# Front End Challenge Iclinic - Thales Ferreira
+# Front End Challenge iClinic - Thales Ferreira
 
 <p align="center">
   <img src="https://eretz.bio/wp-content/uploads/2020/09/logo-iclinic.png">
 </p>
 
 ## :zap: Usage
+
+## :walking: Steps
+
+#### :white_check_mark: Consumir Star Wars API
+#### :white_check_mark: Testes
 
 ### Use bash
 
