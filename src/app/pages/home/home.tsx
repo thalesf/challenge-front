@@ -1,8 +1,6 @@
 import React from "react";
-import PrimaryButton from "@/app/components/button/primary/primary";
-import Title from "@/app/components/typography/title/title";
-import Subtitle from "@/app/components/typography/subtitle/subtitle";
-import classes from './home.scss';
+import { PrimaryButton, Title, Subtitle } from "@/app/components";
+import classes from "./home.scss";
 
 const App: React.FC = () => {
 

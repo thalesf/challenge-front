@@ -35,6 +35,6 @@ describe('<Person />', () => {
        }
       }
     });
-    expect(getByText(/Your master is Luck Skywalker/i)).toBeInTheDocument()
+    expect(getByText(/Luck Skywalker/i)).toBeInTheDocument()
   })
 })
