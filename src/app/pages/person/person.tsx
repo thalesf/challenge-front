@@ -44,7 +44,7 @@ const Person: React.FC = () => {
           {loading ? 'Loading...' : 'choose your path again, Padawan'}
         </button>
         <div className={classes.thumbDescription}>
-          {validateUser() ? <Thumbnail src={darthVader} alt="Darth Vader" /> : <Thumbnail src={lukeSkywalker} alt="Luke Skywalker" />}
+          <Thumbnail src={validateUser() ? darthVader : lukeSkywalker} alt={validateUser() ? "Darth Vader" : "Luke Skywalker"} />
           <h1 className={clsx(validateUser() ? false : classes.fontColorPrimary, classes.title)}>
             Your master is <strong className={classes.masterName}>{user.user.name}</strong></h1>
         </div>
