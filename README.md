@@ -31,3 +31,19 @@ $ npm install or yarn
 $ npm start or yarn start
 # visit http://localhost:3000
 ```
+
+### Run tests
+```bash
+$ npm test or yarn test
+```
+
+### Run tests watch mode
+```bash
+$ npm test:watch or yarn test:watch
+```
+
+### Run Build
+```bash
+$ npm build or yarn build
+# ouput /dist folder
+```
