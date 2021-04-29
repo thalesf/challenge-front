@@ -5,6 +5,11 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './src/index.tsx',
+  output: {
+    path: path.join(__dirname, '/dist'),
+    filename: 'main-[fullhash].js',
+    publicPath: '/'
+  },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', 'scss'],
     alias: {

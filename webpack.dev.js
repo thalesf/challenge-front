@@ -6,7 +6,7 @@ module.exports = merge(common,{
   mode: "development",
   output: {
     path: path.join(__dirname, "/public/js"),
-    filename: "bundle.js",
+    filename: "main-[fullhash].js",
   },
   devServer: {
     port: 3000,
