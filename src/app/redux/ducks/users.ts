@@ -8,8 +8,8 @@ export const Types = {
   LOAD_USERS_FAILURE: 'users/LOAD_USERS_FAILURE',
 };
 
-export const requestOne = 'https://swapi.dev/api/people/1';
-export const requestTwo = 'https://swapi.dev/api/people/4'
+export const requestOne = '//swapi.dev/api/people/1';
+export const requestTwo = '//swapi.dev/api/people/4'
 interface Users {
   loading: boolean,
   user: any
