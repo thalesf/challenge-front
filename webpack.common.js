@@ -4,6 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 
 module.exports = {
+  entry: './src/index.tsx',
   resolve: {
     extensions: ['.ts', '.tsx', '.js', 'scss'],
     alias: {
