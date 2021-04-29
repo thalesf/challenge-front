@@ -1,18 +1,23 @@
 @import "@/app/styles/colors.scss";
 @import "@/app/styles/variables.scss";
 
-@mixin desktop-title {
+@mixin desktopTitle {
   @media(min-width: $desktopBreakpoint){
     font-size: 72px;
   }
 }
-.title {
+.titlePrimary {
   color: $primaryBlue;
-  font-weight: 400;
   font-size: 24px;
-  @include desktop-title;
+}
+.title {
+  @include desktopTitle;
+  @extend .titlePrimary;
+  font-weight: 400;
 }
 
 .bold{
-  @include desktop-title;
+  @include desktopTitle;
+  @extend .titlePrimary;
+  font-weight: 700;
 }

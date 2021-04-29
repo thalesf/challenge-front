@@ -1,28 +1,6 @@
 @import '@/app/styles/colors.scss';
 @import "@/app/styles/variables.scss";
 
-.backgroundPrimary {
-  background-color: $primaryBlack;
-  height: 100vh;
-}
-.backgroundSecondary {
-  background-color: $primaryYellow;
-  height: 100vh;
-}
-
-.content {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  
-  @media (max-width: $desktopBreakpoint){
-    padding-left: 62px;
-    padding-right: 62px;
-  }
-  @media (min-width: $desktopBreakpoint) {
-    flex-direction: column;
-  }
-}
 .buttonBack {
   display: flex;
   align-items: center;
@@ -30,15 +8,13 @@
   padding: 25px;
   margin-bottom: 74px;
 
-  @media (min-width: $desktopBreakpoint){
+  @media (min-width: $desktopBreakpoint) {
     margin-bottom: 34px;
   }
 }
 
-.thumbDescription {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.backButtonTitle {
+  padding-left: 12px;
 }
 
 .buttonBackPrimary {
@@ -46,60 +22,7 @@
   color: $primaryWhite;
 }
 
-.backButtonTitle {
-  padding-left: 12px;
-}
-
 .buttonBackSecondary {
   @extend .buttonBack;
   color: $secondaryBlack;
-}
-
-.button {
-  cursor: pointer;
-  border-radius: 10px;
-  height: 56px;
-  font-weight: bold;
-  width: 321px;
-  max-width: 347px;
-  @media (max-width: $desktopBreakpoint){
-    padding: 16px;
-  }
-  @media (min-width: $desktopBreakpoint) {
-    width: 347px;
-    margin-bottom: 60px;
-  }
-}
-
-.titleName{
-  font-weight: 400;
-  font-size: 36px;
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 34px;
-}
-.title {
-  @extend .titleName;
-  color: $primaryWhite;
-}
-.masterName {
-  @extend .titleName;
-  font-weight: 700;
-}
-
-.opacity {
-  opacity: 0.5;
-}
-
-.fontColorPrimary {
-  color: $secondaryBlack;
-}
-
-.fontColorSecondary {
-  color: $primaryYellow;
-}
-
-.buttonSecondary {
-  background-color: $secondaryBlack;
-  color: $primaryWhite;
 }
