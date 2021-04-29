@@ -22,10 +22,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(png|jpg|jpeg|gif)$/i,
-        type: "asset/resource",
-      },
-      {
         test: /\.ts(x?)$/,
         loader: "ts-loader",
         exclude: /node_modules/,
