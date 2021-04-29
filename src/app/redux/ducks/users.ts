@@ -1,15 +1,15 @@
 import { Dispatch } from "redux";
-import AxiosHttpClient from '@/core/infra/http/axios/http-get';
-import { LoadUser } from '@/core/data/load-user';
+import AxiosHttpClient from "@/core/infra/http/axios/http-get";
+import { LoadUser } from "@/core/data/load-user";
 
 export const Types = {
-  LOAD_USERS_REQUEST: 'users/LOAD_USERS_REQUEST',
-  LOAD_USERS_SUCCESS: 'users/LOAD_USERS_SUCCESS',
-  LOAD_USERS_FAILURE: 'users/LOAD_USERS_FAILURE',
+  LOAD_USERS_REQUEST: "users/LOAD_USERS_REQUEST",
+  LOAD_USERS_SUCCESS: "users/LOAD_USERS_SUCCESS",
+  LOAD_USERS_FAILURE: "users/LOAD_USERS_FAILURE",
 };
 
-export const requestOne = '//swapi.dev/api/people/1';
-export const requestTwo = '//swapi.dev/api/people/4'
+export const requestOne = "//swapi.dev/api/people/1";
+export const requestTwo = "//swapi.dev/api/people/4"
 interface Users {
   loading: boolean,
   user: any

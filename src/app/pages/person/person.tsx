@@ -8,8 +8,8 @@ import { RootStore } from "@/app/redux/store";
 
 import classes from "./person.scss";
 
-const darthVader = 'https://res.cloudinary.com/dnv46kilg/image/upload/v1619702852/darth-vader_eduahv.png';
-const lukeSkywalker = 'https://res.cloudinary.com/dnv46kilg/image/upload/v1619702852/luke-skywalker_xwkieq.png';
+const darthVader = "https://res.cloudinary.com/dnv46kilg/image/upload/v1619702852/darth-vader_eduahv.png";
+const lukeSkywalker = "https://res.cloudinary.com/dnv46kilg/image/upload/v1619702852/luke-skywalker_xwkieq.png";
 
 enum User{
   lukeSkywalker = 1,
@@ -38,7 +38,7 @@ const Person: React.FC = () => {
           [classes.opacity]: loading,
           [classes.buttonSecondary]: !isDarthVader()
         })} onClick={() => dispatch(loadUsers())} disabled={loading}>
-          {loading ? 'Loading...' : 'choose your path again, Padawan'}
+          {loading ? "Loading..." : "choose your path again, Padawan"}
         </button>
         <div className={classes.thumbDescription}>
           {loading ? (

@@ -1,6 +1,6 @@
 export interface HttpRequest {
   readonly method:
-  | 'get' | 'GET'
+  | "get" | "GET"
   readonly url: string;
 }
 export interface HttpClient {

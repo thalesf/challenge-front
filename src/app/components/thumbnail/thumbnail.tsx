@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
 import classes from "./style.scss";
 
 type Props = {
   src: string,
-  // size?: number,
   alt?: string
 };
 

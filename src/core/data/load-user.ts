@@ -1,6 +1,6 @@
 import { LoadUserItem } from "@/core/usecases/load-user";
 import { User } from "@/core/entities/user";
-import { HttpClient } from '@/core/data/axios-http-client'
+import { HttpClient } from "@/core/data/axios-http-client";
 
 export class LoadUser implements LoadUserItem {
   constructor (
