@@ -1,6 +1,7 @@
 import { User } from "@/core/entities/user";
 import { Dispatch } from "redux";
 import AxiosHttpClient from '@/core/infra/http/axios/http-get';
+import { LoadUser } from '@/core/data/load-user';
 
 export const Types = {
   LOAD_USERS_REQUEST: 'users/LOAD_USERS_REQUEST',
@@ -8,6 +9,8 @@ export const Types = {
   LOAD_USERS_FAILURE: 'users/LOAD_USERS_FAILURE',
 };
 
+export const requestOne = 'https://swapi.dev/api/people/1';
+export const requestTwo = 'https://swapi.dev/api/people/4'
 interface Users {
   loading: boolean,
   user: User
@@ -28,22 +31,17 @@ export const loadUsers = () => async (dispatch: Dispatch) => {
     })
 
     const axios = new AxiosHttpClient();
-    const requestOne = axios.request({
-      url: 'https://swapi.dev/api/people/1',
-      method: "get",
-    })
+    const loadFirstUser = new LoadUser(requestOne, axios);
+    const loadSecondUser = new LoadUser(requestTwo, axios);
 
-    const requestTwo = axios.request({
-      url: 'https://swapi.dev/api/people/4',
-      method: "get",
-    })
-
-
-    Promise.race([requestOne, requestTwo]).then((user: any) => {
+    const user1 = loadFirstUser.getUser();
+    const user2 = loadSecondUser.getUser();
+    
+    Promise.race([user1, user2]).then((user: any) => {
       dispatch({
         type: Types.LOAD_USERS_SUCCESS,
         payload: {
-          user: user.data
+          user
         }
       })
     })

@@ -9,13 +9,29 @@
   height: 100vh;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .buttonBack {
-  color: $primaryWhite;
+  cursor: pointer;
   padding: 25px;
   margin-bottom: 74px;
 }
 
+.buttonBackPrimary {
+  @extend .buttonBack;
+  color: $primaryWhite;
+}
+
+.buttonBackSecondary {
+  @extend .buttonBack;
+  color: $secondaryBlack;
+}
+
 .button{
+  cursor: pointer;
   border-radius: 10px;
   margin-bottom: 24px;
   width: 347px;
@@ -30,4 +46,17 @@
 
 .opacity {
   opacity: 0.5;
+}
+
+.fontColorPrimary{
+  color: $secondaryBlack;
+}
+
+.fontColorSecondary{
+  color: $primaryYellow;
+}
+
+.buttonSecondary {
+  background-color: $secondaryBlack;
+  color: $primaryWhite;
 }

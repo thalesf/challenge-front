@@ -1,7 +1,17 @@
 @import "@/app/styles/colors.scss";
+@import "@/app/styles/variables.scss";
 
 .subtitle {
   color: $primaryBlue;
   font-weight: 400;
   font-size: 14px;
+  
+  @media(max-width: $desktopBreakpoint){
+    margin-top: 8px;
+    margin-bottom: 24px;
+  }
+  @media(min-width: $desktopBreakpoint){
+    margin-top: 8px;
+    margin-bottom: 24px;
+  }
 }

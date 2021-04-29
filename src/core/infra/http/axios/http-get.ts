@@ -1,4 +1,4 @@
-import HttpClient, { HttpRequest } from "@/core/data/axios-http-client";
+import { HttpClient, HttpRequest } from "@/core/data/axios-http-client";
 import axios from "axios";
 export default class AxiosHttpClient implements HttpClient {
   async request<Response>(option: HttpRequest): Promise<Response> {

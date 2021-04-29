@@ -1,10 +1,8 @@
 export interface HttpRequest {
   readonly method:
-| 'get' | 'GET'
+  | 'get' | 'GET'
   readonly url: string;
 }
-interface HttpClient {
-  request<Response>(params: HttpRequest): Promise<Response>;
+export interface HttpClient {
+  request(params: HttpRequest): Promise<any>;
 }
-
-export default HttpClient;
