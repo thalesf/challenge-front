@@ -6,9 +6,10 @@
   "author": "Thales <thales.fdasilva@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack serve --config webpack.dev.js",
+    "start": "node index",
+    "dev": "webpack serve --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d build",
     "test": "jest",
     "test:watch": "yarn test --watch --passWithNoTests --no-cache --runInBand"
   },

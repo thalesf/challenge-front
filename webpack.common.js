@@ -8,7 +8,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, '/dist'),
     filename: 'main-[fullhash].js',
-    publicPath: '/'
+    publicPath: '/challenge-front/'
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', 'scss'],

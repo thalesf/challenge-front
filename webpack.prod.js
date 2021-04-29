@@ -6,7 +6,7 @@ const common = require('./webpack.common');
 module.exports = merge(common, {
   mode: 'production',
   devServer: {
-    contentBase: './public',
+    contentBase: './dist',
     writeToDisk: true,
     historyApiFallback: true,
     port: 8080,
@@ -17,6 +17,7 @@ module.exports = merge(common, {
       '@': path.join(__dirname, 'src'),
     },
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
