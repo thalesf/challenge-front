@@ -9,6 +9,14 @@
 #### :white_check_mark: Consumir Star Wars API
 #### :white_check_mark: Testes
 
+## :speech_balloon:	: Stack
+
+React
+Typescript
+Sass
+Webpack
+
+
 ## :earth_americas: Link
 
 https://challenge-front-end-iclinic.herokuapp.com/
