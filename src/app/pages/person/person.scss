@@ -23,36 +23,11 @@
     flex-direction: column;
   }
 }
-.buttonBack {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  padding: 25px;
-  margin-bottom: 74px;
-
-  @media (min-width: $desktopBreakpoint){
-    margin-bottom: 34px;
-  }
-}
 
 .thumbDescription {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.buttonBackPrimary {
-  @extend .buttonBack;
-  color: $primaryWhite;
-}
-
-.backButtonTitle {
-  padding-left: 12px;
-}
-
-.buttonBackSecondary {
-  @extend .buttonBack;
-  color: $secondaryBlack;
 }
 
 .button {
