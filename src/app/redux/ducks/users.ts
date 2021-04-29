@@ -1,4 +1,3 @@
-import { User } from "@/core/entities/user";
 import { Dispatch } from "redux";
 import AxiosHttpClient from '@/core/infra/http/axios/http-get';
 import { LoadUser } from '@/core/data/load-user';
@@ -13,7 +12,7 @@ export const requestOne = 'https://swapi.dev/api/people/1';
 export const requestTwo = 'https://swapi.dev/api/people/4'
 interface Users {
   loading: boolean,
-  user: User
+  user: any
 }
 
 const initialState: Users = {
@@ -36,7 +35,7 @@ export const loadUsers = () => async (dispatch: Dispatch) => {
 
     const user1 = loadFirstUser.getUser();
     const user2 = loadSecondUser.getUser();
-    
+
     Promise.race([user1, user2]).then((user: any) => {
       dispatch({
         type: Types.LOAD_USERS_SUCCESS,
@@ -59,10 +58,7 @@ const usersReducer = (state: Users = initialState, action: any): Users => {
       return {
         ...state,
         loading: true,
-        user: {
-          name: "",
-          url: ""
-        }
+        user: {}
       }
     case Types.LOAD_USERS_SUCCESS:
       return {
@@ -74,10 +70,7 @@ const usersReducer = (state: Users = initialState, action: any): Users => {
       return {
         ...state,
         loading: false,
-        user: {
-          name: "",
-          url: ""
-        }
+        user: {}
       }
     default:
       return state;
